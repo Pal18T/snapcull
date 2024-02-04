@@ -90,7 +90,7 @@ console.log('created');
 export const sendEmail = async (emailContent: EmailContent, sendTo: string[]) => {
 
   const mailOptions = {
-    from: process.env.USER,
+    from: `"SnapCull" <${process.env.USER}>`,
     to: sendTo,
     html: emailContent.body,
     subject: emailContent.subject,
